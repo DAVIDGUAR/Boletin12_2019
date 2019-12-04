@@ -19,27 +19,31 @@ public class Garaxe {
     private double resultado;
     private double precio = 1.5;
     private double cartosrecibidos, cartosdevoltos, tempo, cambio;
-
     List<String> matriculas = new ArrayList<String>();
+
+   
 
     public Garaxe() {
 
     }
 
     public void setMatricula(String matri) {
-
+        
         if (numeroCoches <= 4) {
 
-            System.out.println("Plazas vacias = " );
+            System.out.println("Plazas vacias = " + plazasvacias);
 
-          this.matricula=matri;
+            this.matricula = matri;
             numeroCoches++;
             plazasvacias--;
+            
+            
             matriculas.add(matri);
-            tamano = matriculas.size();
+            
+            
            
 
-            System.out.println(matriculas);
+            
 
         } else {
 
@@ -48,6 +52,16 @@ public class Garaxe {
         }
 
     }
+    
+    public int comprobar_tamaño(){
+        
+        
+         tamano = matriculas.size();
+        System.out.println(tamano);
+        return tamano;
+    }
+    
+    
 
     public void calcular_precio(int tempo) {
 

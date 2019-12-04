@@ -36,7 +36,7 @@ public class Boletin12_2019 {
         coche1.calcular_precio(5);
         coche1.calcular_cambio(20);
         System.out.println(coche1.visualizacion());
-
+ 
         
         
     }
