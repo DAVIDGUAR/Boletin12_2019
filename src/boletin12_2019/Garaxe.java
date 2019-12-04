@@ -21,14 +21,12 @@ public class Garaxe {
     private double cartosrecibidos, cartosdevoltos, tempo, cambio;
     List<String> matriculas = new ArrayList<String>();
 
-   
-
     public Garaxe() {
 
     }
 
     public void setMatricula(String matri) {
-        
+
         if (numeroCoches <= 4) {
 
             System.out.println("Plazas vacias = " + plazasvacias);
@@ -36,14 +34,8 @@ public class Garaxe {
             this.matricula = matri;
             numeroCoches++;
             plazasvacias--;
-            
-            
-            matriculas.add(matri);
-            
-            
-           
 
-            
+            matriculas.add(matri);
 
         } else {
 
@@ -52,18 +44,22 @@ public class Garaxe {
         }
 
     }
-    
-    public int comprobar_tamaño(){
-        
-        
-         tamano = matriculas.size();
-        System.out.println(tamano);
+
+    public int comprobar_arrayList() {
+
+        tamano = matriculas.size();
+        System.out.println("TAMAÑO ARRAY "+tamano);
+        System.out.println("DATOS QUE HAY EN EL ARRAY_LIST");
+        for (int x = 0; x < tamano; x++) {
+            System.out.println(matriculas.get(x));
+        }
+
         return tamano;
     }
-    
-    
 
     public void calcular_precio(int tempo) {
+        
+        
 
         if (tempo < 3) {
 
